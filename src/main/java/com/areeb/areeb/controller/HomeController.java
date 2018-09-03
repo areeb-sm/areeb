@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
     @ResponseBody
     public String showLoginPage() {
         return "under development 👨‍💻";

@@ -5,8 +5,8 @@
 
 	<groupId>com.areeb</groupId>
 	<artifactId>areeb</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<version>SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<name>areeb</name>
 	<description>Demo project for Spring Boot</description>
@@ -97,6 +97,17 @@
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<configuration>
 					<forkMode>none</forkMode>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>package com.areeb.areeb.AreebApplication</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
